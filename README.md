@@ -35,7 +35,7 @@ socialResize('./path/to/original.jpg','facebookProfile','./path/to/resized.jpg',
 ```
 ## parameters
 ```bash
-socialResize(srcImgPath ,  socialPlatformType,  destImgPath = srcImgPath  ,  backgroundColor= 0x00000000)
+socialResize(srcImgPath, socialPlatformType, destImgPath = srcImgPath, backgroundColor= 0x00000000)
 ```
 * **`srcImgPath`**: The path of the original image
 * **`socialPlatformType`** The platform type, types available:
