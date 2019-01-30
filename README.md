@@ -37,7 +37,7 @@ socialResize('./path/to/original.jpg','facebookProfile','./path/to/resized.jpg',
 ```bash
 socialResize(srcImgPath ,  socialPlatformType,  destImgPath = srcImgPath  ,  backgroundColor= 0x00000000)
 ```
-* **`srcImgPath` **: The path of the original image
+* **`srcImgPath`**: The path of the original image
 * **`socialPlatformType`** The platform type, types available:
 		'facebookProfile'
 		'facebookCover'
@@ -53,7 +53,7 @@ socialResize(srcImgPath ,  socialPlatformType,  destImgPath = srcImgPath  ,  bac
 		'tumblrProfile'
 
 * **`destImgPath`** [String]: Destination image path (**default** = source image path)
-* **`backgroundColor` **[rgba hex]: (**default** is 0x00000000)
+* **`backgroundColor`**[rgba hex]: (**default** is 0x00000000)
 
 
 
