@@ -1,0 +1,1 @@
+# node-social-image-resizer
