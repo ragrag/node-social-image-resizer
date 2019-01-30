@@ -19,40 +19,40 @@ const dims = new Map([
 
 
 const socialResize = async function resize(imgPath, type, newPath = imgPath,background =0x000000 ){
-const promise = new Promise((resolve,reject)=> {
-    Jimp.read(imgPath, (err, img) => {
-        if (!err && img !== undefined && dims.get(type)!== undefined ) 
-        {
-        const w = dims.get(type)[0];
-        const h = dims.get(type)[1];
-        if(w === h)
-        {
-            if(img.bitmap.width<w && img.bitmap.height<h)
+    const promise = new Promise((resolve,reject)=> {
+        Jimp.read(imgPath, (err, img) => {
+            if (!err && img !== undefined && dims.get(type)!== undefined ) 
             {
-            img
-            .contain( (w,h));
+            const w = dims.get(type)[0];
+            const h = dims.get(type)[1];
+            if(w === h)
+            {
+                if(img.bitmap.width<w && img.bitmap.height<h)
+                {
+                img
+                .contain( (w,h));
+                }
+                else {
+                    img
+                    .contain( Math.max(w,h),Math.max(w,h));
+                }
+        
             }
             else {
                 img
-                .contain( Math.max(w,h),Math.max(w,h));
+                .contain( w,h).background( background);
+            }     
+            img.background( background)
+            .quality(100)
+            .write(newPath,()=>{
+                resolve(newPath);
+            });
             }
-    
-        }
-        else {
-            img
-            .contain( w,h).background( background);
-        }     
-        img.background( background)
-        .quality(100)
-        .write(newPath,()=>{
-            resolve(newPath);
+            else {
+                reject("Something went wrong");
+            }
         });
-        }
-        else {
-            reject("Something went wrong");
-        }
     });
-});
 const newImgPath = await promise;
 return newImgPath;
 }
