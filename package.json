@@ -10,9 +10,9 @@
   "license": "MIT",
   "homepage": "https://github.com/ragrag/node-multilanguage-quotes",
   "keywords": [
-    "Quotes",
-    "Random",
-    "Multilanguage"
+    "Resize",
+    "Social",
+    "Image"
   ],
   "dependencies": {
     "jimp": "^0.6.0"
