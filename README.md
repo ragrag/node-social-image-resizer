@@ -22,8 +22,8 @@ const socialResize = require('node-social-image-resizer');
 
 
 
-#Usage
-##Example
+# Usage
+## Example
 
 ```js
 socialResize('./path/to/original.jpg','facebookProfile','./path/to/resized.jpg',0xFFFFFFFF)
@@ -33,7 +33,7 @@ socialResize('./path/to/original.jpg','facebookProfile','./path/to/resized.jpg',
 )
 .catch( err => console.log(err));
 ```
-##parameters
+## parameters
 ```bash
 socialResize(srcImgPath ,  socialPlatformType,  destImgPath = srcImgPath  ,  backgroundColor= 0x00000000)
 ```

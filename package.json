@@ -1,13 +1,19 @@
 {
   "name": "node-social-image-resizer",
   "version": "1.0.0",
-  "description": "",
+  "description": "Resize images to fit multiple social platforms",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "MIT",
+  "homepage": "https://github.com/ragrag/node-multilanguage-quotes",
+  "keywords": [
+    "Quotes",
+    "Random",
+    "Multilanguage"
+  ],
   "dependencies": {
     "jimp": "^0.6.0"
   }
